@@ -10,7 +10,7 @@ before_install:
   - docker build -t nicocarratala/ahorcadopy -f Dockerfile .
 
 script:
-  - docker run -e CI=true nicocarratala/ahorcadopy python -m unittest
+  - docker run -e CI=true nicocarratala/ahorcadopy coverage run -m unittest
 
 after_success:
   - coveralls
