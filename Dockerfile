@@ -6,6 +6,8 @@ WORKDIR /code
 # copy the dependencies file to the working directory
 COPY requirements.txt .
 
+RUN python -m venv venv
+
 RUN ./venv/Scripts/activate
 
 # install dependencies
