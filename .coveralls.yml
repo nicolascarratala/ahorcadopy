@@ -1,3 +1,2 @@
-repo_token: vVNxuLwoZ94kzRfxLJbTCwB4Yisk4hZ1uMB1e
-service_name: travis-ci
-parallel: true # if the CI is running your build in parallel
+service_name: travis-cli
+repo_token: ECKPDc5mU9UTMfHg0tHR3uAP2OG9lUuAE
