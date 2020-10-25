@@ -6,10 +6,6 @@ WORKDIR /code
 # copy the dependencies file to the working directory
 COPY requirements.txt .
 
-RUN python -m venv venv
-
-RUN source mypython/bin/activate
-
 # install dependencies
 RUN pip install -r requirements.txt
 
