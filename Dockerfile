@@ -8,7 +8,7 @@ COPY requirements.txt .
 
 RUN python -m venv venv
 
-RUN ./venv/Scripts/activate
+RUN source mypython/bin/activate
 
 # install dependencies
 RUN pip install -r requirements.txt
