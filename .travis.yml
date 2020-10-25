@@ -13,8 +13,6 @@ script:
   - docker run -e CI=true nicocarratala/ahorcadopy python -m unittest; coverage run -m unittest; coveralls
 
 after_success:
-  - coverage run -m unittest
-  - coveralls
   - docker build -t nicocarratala/ahorcadopy .
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   - docker push nicocarratala/ahorcadopy
