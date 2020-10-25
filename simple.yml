@@ -6,7 +6,8 @@ install:
   - pip install -r requirements.txt
 # command to run tests
 script:
-  - coverage run -m unittest
+  - python -m unittest
+  - coverage run --omit '/virtualenv/*' -m unittest
   - coveralls
 after_success:
   - docker build -t nicocarratala/ahorcadopy .
