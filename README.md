@@ -3,3 +3,5 @@
 ahorcadopy 🐍
 
 proyecto UM
+
+Juego de ahorcado
