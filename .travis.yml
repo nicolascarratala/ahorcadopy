@@ -11,8 +11,6 @@ before_install:
 
 script:
   - docker run -e CI=true nicocarratala/ahorcadopy python -m unittest
-  - coverage run --omit '/*' -m unittest
-  - coveralls
 
 after_success:
   - docker build -t nicocarratala/ahorcadopy .

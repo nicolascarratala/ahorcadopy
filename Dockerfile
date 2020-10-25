@@ -12,4 +12,8 @@ RUN pip install -r requirements.txt
 # copy the content of the local src directory to the working directory
 COPY ./ .
 
+RUN coverage run --omit '/*' -m unittest
+
+RUN coveralls
+
 CMD ["python", "main.py"]
