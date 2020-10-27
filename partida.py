@@ -1,4 +1,4 @@
-class Partida():
+class Partida:
     def __init__(self, palabra, intentos, tipo_palabra, nombre_jugador):
         self._palabra = palabra
         self._intentos = intentos
@@ -10,10 +10,16 @@ class Partida():
         Partida.ordenar_palabra(self)
 
 
+    # palabra
     @property
     def palabra(self):
         return self._palabra
 
+    @palabra.setter
+    def palabra(self, val):
+        self._palabra = val
+
+    # intetnos
     @property
     def intentos(self):
         return self._intentos
@@ -29,6 +35,10 @@ class Partida():
     @property
     def palabra_aciertos(self):
         return self._palabra_aciertos
+
+    @palabra_aciertos.setter
+    def palabra_aciertos(self, val):
+        self._palabra_aciertos = val
 
     def ordenar_palabra(self):
         lista = []
@@ -51,6 +61,8 @@ class Partida():
         if self._intentos < 0:
             raise ValueError
 
+    def reiniciar_aciertos(self):
+        self.palabra_aciertos = []
+        for k in self._palabra:
+            self.palabra_aciertos.append(None)
 
-palabra = Partida('python', 2, 'lenguaje de programacion', 'Claudio')
-print(palabra.__dict__)
