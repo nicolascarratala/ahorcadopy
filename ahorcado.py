@@ -162,19 +162,11 @@ class Ahorcado:
 
     nombre = str(input('>'))
 
-    print(nombre)
-
-    temp = len(nombre)
-
-    nombre = nombre[:temp - 2]
-
     print('Elija dificultad del 1 al 10')
 
     dificultad = int(input(">"))
 
     print(dificultad)
-
-
 
     partida = ServicesPartidas.iniciar_partida(self, nombre, dificultad, '', '')
 
@@ -187,10 +179,6 @@ class Ahorcado:
         print('Ingrese una letra ')
 
         letra = str(input('>')).upper()
-
-        temp = len(letra)
-
-        letra = letra[:temp - 2]
 
         juego = ServicesPartidas.intentar_letra(self, partida, letra)
 
