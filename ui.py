@@ -6,3 +6,7 @@ class Ui:
 
     def linea(self):
         print('_________________________________')
+
+    def request_letter(self):
+        text = "Escriba letra porfavor"
+        return input(text)

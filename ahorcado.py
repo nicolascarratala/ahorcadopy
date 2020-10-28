@@ -4,9 +4,6 @@ from ui import Ui
 
 
 class Ahorcado:
-  def request_letter(self):
-    text = "Escriba letra porfavor"
-    return input(text)
 
   def un_jugador(self):
 
@@ -31,7 +28,7 @@ class Ahorcado:
 
     while(self.flag):
 
-      self.letter = Ahorcado().request_letter()
+      self.letter = Ui().request_letter()
       self.present = False
 
       # Salir del juego
@@ -112,7 +109,7 @@ class Ahorcado:
         self.vidas = 1
 
       while(self.flag):
-        self.letter = Ahorcado().request_letter()
+        self.letter = Ui().request_letter()
 
         self.present = False
 
@@ -165,9 +162,19 @@ class Ahorcado:
 
     nombre = str(input('>'))
 
+    print(nombre)
+
+    temp = len(nombre)
+
+    nombre = nombre[:temp - 2]
+
     print('Elija dificultad del 1 al 10')
 
     dificultad = int(input(">"))
+
+    print(dificultad)
+
+
 
     partida = ServicesPartidas.iniciar_partida(self, nombre, dificultad, '', '')
 
@@ -180,6 +187,10 @@ class Ahorcado:
         print('Ingrese una letra ')
 
         letra = str(input('>')).upper()
+
+        temp = len(letra)
+
+        letra = letra[:temp - 2]
 
         juego = ServicesPartidas.intentar_letra(self, partida, letra)
 

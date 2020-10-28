@@ -1,5 +1,4 @@
 from ahorcado import Ahorcado
-from ui import Ui
 
 
 class Menu:
@@ -20,7 +19,7 @@ class Menu:
             except ValueError as e:
                 print("No se aceptan letras, Elija otra opción")
 
-            if  opcion > 0 and opcion < 3:
+            if 0 < opcion < 3:
 
                 if opcion == 1:
                     print('Juega uno')
